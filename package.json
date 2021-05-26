@@ -1,0 +1,27 @@
+{
+  "devDependencies": {
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.13.14",
+    "@babel/preset-env": "^7.13.12",
+    "@babel/register": "^7.13.14",
+    "@wdio/cli": "^7.3.0",
+    "@wdio/cucumber-framework": "^7.3.0",
+    "@wdio/junit-reporter": "^7.3.0",
+    "@wdio/local-runner": "^7.3.0",
+    "@wdio/spec-reporter": "^7.3.0",
+    "@wdio/sync": "^7.3.0",
+    "chromedriver": "^89.0.0",
+    "wdio-chromedriver-service": "^7.0.0",
+    "wdio-docker-service": "^3.1.2"
+  },
+  "dependencies": {
+    "@wdio/allure-reporter": "^7.3.0",
+    "adm-zip": "^0.5.5",
+    "allure-commandline": "^2.13.8"
+  },
+  "scripts": {
+    "test-allure-report": "./node_modules/.bin/wdio wdio.conf.allurereport.js",
+    "test-junit-report": "./node_modules/.bin/wdio wdio.conf.junithtmlreport.js && xunit-viewer --r=./junit-report/report.xml --o=./junit-report/report.html",
+    "test-docker-allure-report": "./node_modules/.bin/wdio wdio.conf.docker.js"
+  }
+}
